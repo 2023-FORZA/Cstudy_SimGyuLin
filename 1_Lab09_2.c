@@ -1,14 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int N, sum = 0;
-    char a[101];
-    scanf("%d", &N);
-    scanf("%s", a);
-    for (int i = 0; i < N; i++) {
-        sum += a[i] - '0';
-    }
-    printf("%d", sum);
+    int n, sum = 0;
 
+    char* p;
+
+    scanf("%d", &n);
+
+    getchar();
+    p = (char*)malloc(sizeof(char) * (n + 1));
+
+    gets(p);
+    for (int i = 0; p[i] != NULL; i++) {
+        sum = sum + p[i] - '0';
+    }
+
+    printf("%d", sum);
     return 0;
 }
